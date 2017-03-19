@@ -1,0 +1,30 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>External - popup</title>
+    <meta name="description" content="Popup page outside of my control">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+</head>
+
+<body>
+<h1>Popup</h1>
+<p>
+    Contents of this page is fully controlled by other party - a payment processor. <br>
+    This is where user enters his payment details.
+</p>
+<p>
+    e.g. <i>"After you have finished your data input, click here to:"</i> <br>
+    <a href="" id="final-confirmation-button">Confirm your payment</a>
+</p>
+
+
+<script type="text/javascript">
+  $(function() {
+    $('#final-confirmation-button').on('click', function(e) {
+      e.preventDefault();
+      window.close(); // <-- this breaks it all
+    });
+  });
+</script>
+</body>
+</html>

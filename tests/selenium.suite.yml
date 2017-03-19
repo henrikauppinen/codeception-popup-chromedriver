@@ -1,0 +1,8 @@
+class_name: SeleniumTester
+modules:
+  enabled:
+    - WebDriver:
+        url: http://localhost/ceptpopup/
+        port: 9515
+        browser: chrome
+    - \Helper\Selenium

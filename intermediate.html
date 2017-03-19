@@ -1,0 +1,28 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>External - intermediate page</title>
+    <meta name="description" content="Intermediate page outside of my control">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+</head>
+
+<body>
+<h1>Intermediate</h1>
+<p>
+    In reality, contents of this intermediate page is fully controlled by other party - a payment processor. <br>
+    It only load a javascript that opens up a popup window where user enters his payment details.
+</p>
+
+
+<script type="text/javascript">
+  $(function() {
+    var settings = "height=400,width=500,status=yes,dependent=no,resizable=yes";
+
+    popup = window.open('popup.html', 'dont_know_the_name_here', settings);
+    if (popup != null) {
+      popup.focus();
+    }
+  });
+</script>
+</body>
+</html>
